@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-<meta name="viewport" content="width=device-width, initial-scale=1" /> 
 
-   
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+
     <title> Multi Search Engines</title>
 </head>
 <body>
@@ -23,26 +23,28 @@ body{
 }
 
 .search {
-  width: 600px;
+  width: auto;
   position: relative;
   display: flex;
-  height: 70px;
-  padding: 5px;
+  height: auto;
+  padding: 1%;
   
 }
-.search > btt { width: 70px; }
+.search > btt { width: auto}
 .inn {
-  width: 100%;
-  border: 3px solid #6046ff;
+  width: 30%;
+  border: solid #6046ff;
   border-right: none;
-  padding: 5px;
-  height: 50px;
-  width: 2000px;
-  border-radius: 5px 0 0 5px;
+  
+  height: auto;
+  
+  border-radius: 1% 0 0 1%;
   outline: none;
   flex-grow: 3
  
 }
+
+
 
 .inn:focus{
   color: #6046ff;
@@ -55,7 +57,7 @@ h1{
 	font-weight: normal;
 	font-family: Arial, Helvetica, sans-serif;
 	
-	line-height: 42px;
+	line-height: auto;
 	text-transform: uppercase;
 	
 
@@ -67,31 +69,21 @@ h2{
   color: white;
 }
 .sel{
-    width: 70%;
+    width:5%;
   border: 3px solid #6046ff;
   border-right: none;
   padding: 5px;
-  height: 50px;
-  width: 150px;
-  border-radius: 5px 0 0 5px;
+  height: auto;
+  border-radius: 1%px 0 0 1%;
   outline: none;
   flex-grow: 3
  
 }
-option {
-    width: 100%;
-  border: 3px solid #6046ff;
-  border-right: none;
-  padding: 5px;
-  height: 40px;
-  width: 2000px;
-  border-radius: 5px 0 0 5px;
-  outline: none;
-}
+
 .btt{
-  width: 70px;
+  width: 15%;
   
-  height: 50px;
+  height: auto;
   border: 1px solid #6046ff;
   background: #6046ff;
   text-align: center;
@@ -104,111 +96,117 @@ option {
 
 /*Resize the wrap to see the search bar change!*/
 .wrap{
-  width: 40%;
+  width: 80%;
+  height: auto;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-  /* Basic Styling */
-
-
-        nav {
-            background-color: lavender; /* Lavender background */
-            color:  #6046ff; /* Primary text color (white) */
-            padding: 10px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            display: flex;
-            opacity: o.4;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: space-between; /* or flex-start, center, flex-end */
-        }
-
-        nav li {
-            margin: 0 15px;
-        }
-
-        nav a {
-            text-decoration: none;
-            color:  #6046ff; /* White link text */
-            padding: 8px 16px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
-        }
-
-       
-
-        /* Dropdown menu styling */
-        .dropdown {
-            position: relative;
-        }
-
-	    .navbar-collapse.collapse {
-display: block!important;
+nav {
+    background-color: white; /* Example background color */
+    color:#6046ff;
+    padding: 10px;
+    position: relative; /* For positioning the menu icon */
+    display: flex;
+    opacity: 0.5;
 }
 
-.navbar-nav>li, .navbar-nav {
-float: left !important;
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack navigation items vertically by default */
+    align-items: center; /* Center the items horizontally */
 }
 
-.navbar-nav.navbar-right:last-child {
-margin-right: -15px !important;
+nav li {
+    margin: 10px 0; /* Space between stacked items */
 }
 
-.navbar-right {
-float: right!important;
+nav a {
+    text-decoration: none;
+    color: #6046ff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: lavender; /* Lavender dropdown background */
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
 
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
+nav a:hover {
+    background-color:white /* Darker background on hover */
+}
 
-        .dropdown-content a {
-            padding: 12px 16px;
-            display: block;
-            text-align: left;
-            color: white; /* White dropdown link text */
-        }
+/* Mobile Specific Styles */
+@media (max-width: 768px) { /* Adjust breakpoint as needed */
+    nav ul {
+        display: none; /* Hide the menu by default on mobile */
+        flex-direction: column; /* Ensure vertical stacking */
+        position: absolute; /* Position the menu absolutely */
+        top: 100%; /* Place it below the navbar */
+        left: 0;
+        width: 100%;
+        background-color: #333; /* Same background as navbar */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+        z-index: 1000; /* Ensure it's above other content */
+    }
 
-        .dropdown-content a:hover {
-            background-color: white; /* White background on hover */
-            color: lavender; /* Lavender text on hover */
-        }
+    nav li {
+        margin: 5px 0; /* Reduce spacing between items */
+        width: 100%; /* Make list items full width */
+        text-align: center; /* Center text inside list items */
+    }
+    nav a {
+        display: block; /* Make links full width for easier tapping */
+        padding: 10px; /* Add some padding */
+    }
 
+    /* Menu Icon Styles */
+    .menu-icon {
+        display: block; /* Show the menu icon */
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        font-size: 20px; /* Adjust icon size */
+        color: white;
+    }
 
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
+    /* Toggle the menu visibility */
+    .menu-icon.active + nav ul,
+    nav ul:target { /* Target the <ul> when the menu icon is clicked */
+        display: flex; /* Show the menu */
+    }
 
-            nav li {
-                margin: 10px 0;
-            }
-        }
+    .menu-icon.active {
+        /* Optionally change the icon when the menu is open */
+    }
+}
 
+/* Styles for larger screens (optional) */
+@media (min-width: 769px) {
+    nav ul {
+        display: flex; /* Horizontal menu on larger screens */
+        flex-direction: row;
+        justify-content: space-between; /* Distribute items evenly */
+        align-items: center;
+    }
+
+    nav li {
+        margin: 0 15px; /* Space between items */
+    }
+
+    .menu-icon {
+        display: none; /* Hide the menu icon on larger screens */
+    }
+}
 
 </style>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
     <nav>
         <ul>
@@ -225,7 +223,7 @@ float: right!important;
     <h1>
 Multi Search Engine</h1>
 
-<h2>Powered by Google , Facebook , Wikipedia , Youtube , Bing , Yahoo , DuckDuckGo , Instagram</h2>
+<h2>Powered by Google , Facebook , Wikipedia , Youtube , Bing , Yahoo , DuckDuckGo and Instagram</h2>
 
 <div class="wrap">
  <div class="search"> 
@@ -307,9 +305,3 @@ int.focus()
 </body>
 
 </html>
- 
-
-
-
-
-
