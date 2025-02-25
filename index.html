@@ -18,8 +18,8 @@ body{
   font-family: 'Open Sans', sans-serif;
   background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20210804/pngtree-modern-simple-elegant-beautiful-color-website-landing-page-background-image_757350.jpg');
   background-repeat: no-repeat;
-  background-position: center center; /* Or adjust as needed */
-  background-size: 150% 1000%; /* Example: 150% zoom */
+  background-position: center center;
+  background-size: 150% 1000%; 
 }
 
 .search {
@@ -117,12 +117,12 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column; /* Stack navigation items vertically by default */
-    align-items: center; /* Center the items horizontally */
+    flex-direction: column; 
+    align-items: center; 
 }
 
 nav li {
-    margin: 10px 0; /* Space between stacked items */
+    margin: 10px 0; 
 }
 
 nav a {
@@ -134,71 +134,71 @@ nav a {
 }
 
 nav a:hover {
-    background-color:white /* Darker background on hover */
+    background-color:white 
 }
 
-/* Mobile Specific Styles */
-@media (max-width: 768px) { /* Adjust breakpoint as needed */
+
+@media (max-width: 768px) 
     nav ul {
-        display: none; /* Hide the menu by default on mobile */
-        flex-direction: column; /* Ensure vertical stacking */
-        position: absolute; /* Position the menu absolutely */
-        top: 100%; /* Place it below the navbar */
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 100%; 
         left: 0;
         width: 100%;
-        background-color: #333; /* Same background as navbar */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
-        z-index: 1000; /* Ensure it's above other content */
+        background-color: #333; 
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+        z-index: 1000; 
     }
 
     nav li {
-        margin: 5px 0; /* Reduce spacing between items */
-        width: 100%; /* Make list items full width */
-        text-align: center; /* Center text inside list items */
+        margin: 5px 0; 
+        width: 100%; 
+        text-align: center; 
     }
     nav a {
-        display: block; /* Make links full width for easier tapping */
-        padding: 10px; /* Add some padding */
+        display: block; 
+        padding: 10px; 
     }
 
-    /* Menu Icon Styles */
+  
     .menu-icon {
-        display: block; /* Show the menu icon */
+        display: block; 
         position: absolute;
         top: 50%;
         right: 10px;
         transform: translateY(-50%);
         cursor: pointer;
-        font-size: 20px; /* Adjust icon size */
+        font-size: 20px;
         color: white;
     }
 
-    /* Toggle the menu visibility */
+  
     .menu-icon.active + nav ul,
-    nav ul:target { /* Target the <ul> when the menu icon is clicked */
-        display: flex; /* Show the menu */
+    nav ul:target
+        display: flex;
     }
 
     .menu-icon.active {
-        /* Optionally change the icon when the menu is open */
+        
     }
 }
 
-/* Styles for larger screens (optional) */
+
 @media (min-width: 769px) {
     nav ul {
-        display: flex; /* Horizontal menu on larger screens */
+        display: flex; 
         flex-direction: row;
-        justify-content: space-between; /* Distribute items evenly */
+        justify-content: space-between; 
         align-items: center;
     }
 
     nav li {
-        margin: 0 15px; /* Space between items */
+        margin: 0 15px; 
     }
 
     .menu-icon {
-        display: none; /* Hide the menu icon on larger screens */
+        display: none; 
     }
 }
 
